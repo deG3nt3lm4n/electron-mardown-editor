@@ -39,7 +39,7 @@ const config = {
       external: [
         'electron',
         'electron-devtools-installer',
-        ...builtinModules,
+        ...builtinModules.filter(m => m !== 'process' && m !== 'assert' ),
       ],
       output: {
         entryFileNames: '[name].cjs',

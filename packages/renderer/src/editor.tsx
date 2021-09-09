@@ -10,7 +10,7 @@ interface Props {
 const Editor: React.FC<Props> = (props) => {
   const {onChange, initialDoc} = props;
   const handleChange = useCallback(
-    state => onChange(state.dic.toString()),
+    state => onChange(state.doc.toString()),
     [onChange]
   )
 
